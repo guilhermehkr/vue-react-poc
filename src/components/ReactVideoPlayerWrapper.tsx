@@ -8,23 +8,23 @@ import VueVideoPlayerPlugin from '@millicast/vue-viewer-plugin'
 /**
  * Warning
  [Vue warn]: Component is missing template or render function. 
-  at <Anonymous accountId="xxTzEe" streamName="myStreamName" ref="use_vue_wrapper" > 
+  at <Anonymous accountId="xxxxx" streamName="myStreamName" ref="use_vue_wrapper" > 
   at <App>
  */
 export const ReactVideoPlayerWrapperBuildWithVueApp = () => {
   const vueApp = createApp(VueVideoPlayer).use(VueVideoPlayerPlugin, {});
   console.log(vueApp);
   const ReactVideoPlayer = applyVueInReact(vueApp);
-  return <ReactVideoPlayer accountId="xxTzEe" streamName="myStreamName" />;
+  return <ReactVideoPlayer accountId="xxxx" streamName="myStreamName" />;
 }
 
 /**
  * Warning
  runtime-core.esm-bundler.js:41 [Vue warn]: Unhandled error during execution of watcher getter 
   at <VideoPlayerContainer class="ml-viewer" id="viewer-container" > 
-  at <App paramsOptions= {accountId: 'xxTzEe', streamName: 'myStreamName'}accountId: "xxTzEe"streamName: "myStreamName"[[Prototype]]: Object > 
+  at <App paramsOptions= {accountId: 'xxxxx', streamName: 'myStreamName'}accountId: "xxxxx"streamName: "myStreamName"[[Prototype]]: Object > 
   at <VResizable class="resizable" > 
-  at <VueVideoPlayer accountId="xxTzEe" streamName="myStreamName" ref="use_vue_wrapper" > 
+  at <VueVideoPlayer accountId="xxxxx" streamName="myStreamName" ref="use_vue_wrapper" > 
   at <App>
 
  * Error thrown
@@ -47,5 +47,5 @@ export const ReactVideoPlayerWrapperBuildWithVueRootComponent = () => {
   // This seems to be required so Vue is able to find components installed by the plugin
   Object.assign(vueApp._component.components, vueApp._context.components);
   const ReactVideoPlayer = applyVueInReact(vueApp._component);
-  return <ReactVideoPlayer accountId="xxTzEe" streamName="myStreamName" />;
+  return <ReactVideoPlayer accountId="xxxxx" streamName="myStreamName" />;
 };
