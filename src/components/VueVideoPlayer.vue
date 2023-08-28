@@ -52,7 +52,7 @@ export default defineComponent({
   data() {
     return {
       viewerPluginParams: {
-        accountId: 'xxTzEe',
+        accountId: 'xxxxxx',
         streamName: 'myStreamName',
       }
     }
