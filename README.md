@@ -1,8 +1,26 @@
-# Testing integrating React + Vue plugins
+# Real time streaming react plugin
 
-POC repo used to figure out how to use Vue components installed from a Vue plugin in a React app
+This library exports a ReactJs wrapper for VueJs applications. This is meant to show how we can create and consume VueJs applications within ReactJs projects
 
-### Prerequisites
+## How to consume
 
-- NodeJs v18
-- Yarn / Npm
+Please, see below how to consume <VideoPlayer /> component
+
+```js
+import { VideoPlayer } from '@dolbyio/rts-react-plugin';
+
+export const RealTimeStreaming = () => {
+  return <VideoPlayer accountId="accountId" streamName="streamName" />;
+};
+```
+
+## Running app locally
+
+### Pre requisits
+
+- NodeJs >= v18
+- Yarn >= v1.22
+
+### How to run
+
+- yarn dev

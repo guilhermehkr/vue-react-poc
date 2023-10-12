@@ -1,18 +1,17 @@
 <template>
-    <vue-resizable class="resizable">
-        <VideoPlayer :paramsOptions="viewerPluginParams" />
-    </vue-resizable>
+  <VideoPlayer
+    :paramsOptions="{
+      accountId,
+      streamName,
+    }"
+  />
 </template>
-  
+
 <script lang="ts">
-import VueResizable from 'vue-resizable';
-import { defineComponent } from 'vue'; 
+import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: "VueVideoPlayer",
-  components: {
-    VueResizable,
-  },
+  name: 'VueVideoPlayer',
   props: {
     accountId: {
       readonly: true,
@@ -24,45 +23,10 @@ export default defineComponent({
       required: true,
       type: String,
     },
-    muted: {
-      readonly: true,
-      required: false,
-      type: Boolean,
-      default: false,
-    },
-    autoplay: {
-      readonly: true,
-      required: false,
-      type: Boolean,
-      default: true,
-    },
-    multisource: {
-      readonly: true,
-      required: false,
-      type: Boolean,
-      default: false,
-    },
-    showLabels: {
-      readonly: true,
-      required: false,
-      type: Boolean,
-      default: true,
-    },
-  },
-  data() {
-    return {
-      viewerPluginParams: {
-        accountId: 'xxxxxx',
-        streamName: 'myStreamName',
-      }
-    }
   },
 });
-
-// Required for VueJs to undestand what this component returns
-// export default VueVideoPlayer;
 </script>
 
 <style>
-    @import "@millicast/vue-viewer-plugin/dist/millicast-vue-viewer-plugin.css";
+  @import '@millicast/vue-viewer-plugin/dist/millicast-vue-viewer-plugin.css';
 </style>

@@ -1,0 +1,3 @@
+# Examples are isolated pieces of code that aren't expected to pass ESLint validation, eg. invalid imports
+dist
+dts
