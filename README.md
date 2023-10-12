@@ -1,4 +1,4 @@
-# Real time streaming react plugin
+# ReactJs wrapper for VueJs apps
 
 This library exports a ReactJs wrapper for VueJs applications. This is meant to show how we can create and consume VueJs applications within ReactJs projects
 
